@@ -24,4 +24,8 @@ public class Author {
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Book> books = new LinkedHashSet<>();
 
+    public Author(Long id, String name) {
+        this.id=id;
+        this.name=name;
+    }
 }

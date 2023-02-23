@@ -1,9 +1,15 @@
 type Query{
     getAuthor:[Author]
     getAuthorById(id:ID):Author
+    getAllBooks:[Book]
 }
 type Mutation{
     saveBook(book:BookInput):Book
+    saveAuthor(author:AuthorInput):Author
+}
+input AuthorInput{
+    id:ID!
+    name:String
 }
 input BookInput{
     id:ID!
@@ -17,11 +23,13 @@ type Author{
     name:String
     books:[Book]
 }
+
 type Book{
     id:ID!
     title:String
     description:String
     pages:Int
+    author:Author
 
 
 }

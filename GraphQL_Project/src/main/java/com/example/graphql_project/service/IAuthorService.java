@@ -10,5 +10,6 @@ public interface IAuthorService {
     //Methode To get All books
     public List<Author> getAuthor();
     public Author getAuthorById(Long id);
+   // public Author saveAuthor(Author author);
 
 }

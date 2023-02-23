@@ -12,7 +12,7 @@ public interface IBookService {
     Book saveBook(BookServiceImpl.BookInput book);
 
     //Methode To get All books
-    public List<Book> retreiveAllBooks();
+    public List<Book> getAllBooks();
     //Methode to get a book by id
     public Book retreiveBookByID(Long id);
 }
