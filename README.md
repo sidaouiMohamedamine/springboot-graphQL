@@ -1,5 +1,11 @@
 # SpringBoot_GraphQL
-
+/**********If you want to save an author but without books******************************/
+mutation{
+  saveAuthor(author:{id:5,name:"sidaoui"}){
+    id
+  	name
+  }
+}
 /**********If you want to retreive all authors******************************/
 query{
 getAuthor{
@@ -33,3 +39,17 @@ mutation{
   id  
 }
 }
+/********If you want to retreive all books******************************/
+query{
+  getAllBooks{
+     title
+      description
+    	pages
+    author{
+      id
+      name
+    }
+        
+  }
+    }
+  
