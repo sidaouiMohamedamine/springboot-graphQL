@@ -28,8 +28,9 @@ public class BookServiceImpl implements IBookService{
 
 
     @Override
-    public List<Book> retreiveAllBooks() {
-        return null;
+    public List<Book> getAllBooks() {
+
+        return bookRepository.findAll();
     }
 
     @Override
