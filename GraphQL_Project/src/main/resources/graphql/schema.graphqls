@@ -1,0 +1,27 @@
+type Query{
+    getAuthor:[Author]
+    getAuthorById(id:ID):Author
+}
+type Mutation{
+    saveBook(book:BookInput):Book
+}
+input BookInput{
+    id:ID!
+    title:String
+    description:String
+    pages:Int
+
+}
+type Author{
+    id:ID!
+    name:String
+    books:[Book]
+}
+type Book{
+    id:ID!
+    title:String
+    description:String
+    pages:Int
+
+
+}
